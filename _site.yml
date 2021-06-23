@@ -1,0 +1,13 @@
+---
+name: "my-website2"
+output_dir: "docs"
+output: 
+  html_document:
+    css: CSSBackground.css
+    theme: readable
+navbar:
+  title: "Summer 2021"
+  left:
+    - text: "Home"
+      href: index.html
+---
