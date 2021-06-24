@@ -1,0 +1,28 @@
+---
+title: "STAT-451"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'stat451.html'))})
+output: 
+  html_document:
+    css: statCSSBackground.css
+    theme: readable
+---
+
+```{r}
+data <- c(.31, .35, .36, .36, .37, .38, .40, .40, .40,
+          .41, .41, .42, .42, .42, .42, .42, .43, .44,
+          .45, .46, .46, .47, .48, .48, .48, .51, .54,
+          .54, .55, .58, .62, .66, .66, .67, .68, .75)
+#stem(data)
+
+y <- c(11, 14, 20, 23, 31, 36, 39, 44, 47, 50,
+59, 61, 65, 67, 68, 71, 74, 76, 78, 79,
+81, 84, 85, 89, 91, 93, 96, 99, 101, 104,
+105, 105, 112, 118, 123, 136, 139, 141, 148, 158,
+161, 168, 184, 206, 248, 263, 289, 322, 388, 513)
+histrv <- hist(y, breaks = 12, ylim = c(0,20), xlim = c(0,600))
+histrv
+```

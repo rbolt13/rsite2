@@ -12,4 +12,6 @@ navbar:
       href: index.html
     - text: "Website Tutorial"
       href: rsite2.html
+    - text: "Stat-451"
+      href: stat451.html
 ---
