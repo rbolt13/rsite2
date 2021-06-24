@@ -1,5 +1,5 @@
 ---
-title: "Welcome to rsite 2"
+title: "Welcome"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -11,12 +11,38 @@ output:
     theme: readable
 ---
 
-### Electric Boogaloo 
+### To the second website created by Randi Bolt using R
 
 As I continue my journey in R, this site will display projects and personal explorations during the Summer of 2021. 
 
+```{r, echo=F}
+library(kableExtra) # highlights table when hover over a line
+```
+
 
 ```{r, echo=F}
-x <- data.frame("Page" = c("[STAT-451]()", "[Contact]()"))
+urls <- rep("https://stackoverflow.com/questions/35078430/including-links-within-rmarkdown-tables-pdf", 4)
+x <- data.frame("Page" = c("rsite2",
+                           "STAT-451",
+                           "Suns Basketball",
+                           "Contact"),
+                "Description" = c("Here I describe the processes that went into making this site using rstudio and github.",
+                                  "Stat-451 description.",
+                                  "Sun's Basketball description",
+                                  "contact information"))
+x$Page <- paste0("[", x$Page, "](", urls, ")")
+kable(x) %>%
+  kable_paper("hover", full_width = F)
 ```
+
+
+```{r load_data, echo=FALSE}
+da.playoffs <- read.csv('da/da.playoffs.csv',
+                  na.strings = c(NA,"","NA"),
+                  header=T)
+da.regular <- read.csv('da/da.regular.csv',
+                  na.strings = c(NA,"","NA"),
+                  header=T)
+```
+
 
