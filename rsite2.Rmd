@@ -7,30 +7,56 @@ knit: (function(input_file, encoding) {
  output_file=file.path(dirname(input_file), out_dir, 'rsite2.html'))})
 output: 
   html_document:
-    css: CSSBackground.css
+    css: rsite2CSSBackground.css
     theme: readable
 ---
+Here are my step by step instructions with pictures on how to create a website using the information provided in the links at the bottom of this page. 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# Materials Needed 
 
-## R Markdown
+* rStudio
+* GitHub Account 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+1. From github create a new repository by selecting repositories, and then selecting *New*. 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+![](images/new.repository.png)
+On the *Create a new repository* page: 
 
-```{r cars}
-summary(cars)
-```
+* Fill out Repository name. (i.e. rsite or rsite2)  
 
-## Including Plots
+* Fill out a short description of the repository. 
 
-You can also embed plots, for example:
+* Select README file and gitIgnore (make sure to select R)
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+![](images/ignore.png)
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+* Create Repository 
+
+![](images/create.repository.png)
+
+Once the repository has been created, click on the green button that says **Code**, and copy the https link. 
+![](images/copy.project.png)
+
+2. Create a new Rstudio project by opening RStudio >> file >> New Project 
+
+![](images/file.newproject.png)
+* Choose Version Control 
+
+![](images/create.project.version.control.png)
+
+* Then Git 
+
+![](images/create.project.GIT.png)
+
+* Then copy the link from github into the Reposityory URL, select where you'd like your project to be saved on your home computer, and then *Create Project*. 
+
+![](images/clone.GIT.repository.png)
+Now 
+
+Sources: 
+
+[GitHub and RStudio](https://resources.github.com/whitepapers/github-and-rstudio/)
+[Link2]()
+[Link3]()
+
+
