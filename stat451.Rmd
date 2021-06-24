@@ -11,7 +11,43 @@ output:
     theme: readable
 ---
 
+# Introducton 
+
+Statistics-4541 : Applied Statistics for Engineers and Scientist was taught Summer term 2021 at PSU by Subhash Kochar. The problems on this page are from Probability & Statistics for Engineering & Sciences 9th Edition by Jay L. Devore - Duxbury Publisher, and the work mine. 
+
+### 1.10 : Consider the strength data for beams given in Example 1.2.
+
+a. Construct a stem-and leaf display of the data. What appears to be a representative strength value? Do the observations appear to be highly concentrated about the representative value or rather spread out?
+
 ```{r}
+beam <- c(5.9, 7.2, 7.3, 6.3, 8.1, 6.8, 7.0, 7.6, 6.8, 6.5, 7.0, 6.3, 7.9, 9.0,
+         8.2, 8.7, 7.8, 9.7, 7.4, 7.7, 9.7, 7.8, 7.7, 11.6, 11.3, 11.8, 10.7)
+stem(beam)
+```
+
+A representative strength value would be 7.7, as more observations are concentrated around this value than any other. 
+
+b. Does the display appear to be reasonably symmetric about a representative value, or would you describe its shape in some other way? 
+
+```{r, echo=F}
+hist(beam, 
+     col = topo.colors(7), 
+     ylim = c(0,10), 
+     xlab= "Flexural Strength (in MegaPascal)",
+     main = "Flexural Strngth of Concreate Beams")
+abline(v=mean(beam), col="orange", lwd = 6)
+abline(v=median(beam), col="red", lwd = 8)
+```
+
+No, I would argue that the data has a slight positive skewed to the right. I say this because the higher frequency values (in blues) seem to be to the left of the representative value (indicated by the red line), which is to the left of the mean (indicated by the orange line).
+
+c. Do there appear to be any outlying strength values? 
+
+Yes there seems to be a small density of values outlying around 11. 
+
+d. What proportion of strength observations in this sample exceed 10 MPa? 
+
+```{r, echo=F}
 data <- c(.31, .35, .36, .36, .37, .38, .40, .40, .40,
           .41, .41, .42, .42, .42, .42, .42, .43, .44,
           .45, .46, .46, .47, .48, .48, .48, .51, .54,
@@ -23,6 +59,6 @@ y <- c(11, 14, 20, 23, 31, 36, 39, 44, 47, 50,
 81, 84, 85, 89, 91, 93, 96, 99, 101, 104,
 105, 105, 112, 118, 123, 136, 139, 141, 148, 158,
 161, 168, 184, 206, 248, 263, 289, 322, 388, 513)
-histrv <- hist(y, breaks = 12, ylim = c(0,20), xlim = c(0,600))
-histrv
+# histrv <- hist(y, breaks = 12, ylim = c(0,20), xlim = c(0,600))
+# histrv
 ```
