@@ -10,6 +10,6 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "rsite2"
+    - text: "Website Tutorial"
       href: rsite2.html
 ---

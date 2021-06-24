@@ -11,38 +11,32 @@ output:
     theme: readable
 ---
 
-### To the second website created by Randi Bolt using R
+### This is the second website created by Randi Bolt using R Studio and GitHub. 
 
 As I continue my journey in R, this site will display projects and personal explorations during the Summer of 2021. 
 
-```{r, echo=F}
+```{r, echo=F, message=F}
+library(dplyr)
 library(kableExtra) # highlights table when hover over a line
 ```
 
 
 ```{r, echo=F}
-urls <- rep("https://stackoverflow.com/questions/35078430/including-links-within-rmarkdown-tables-pdf", 4)
-x <- data.frame("Page" = c("rsite2",
+urls <- c("https://rbolt13.github.io/rsite2/rsite2.html",
+          "https://rbolt13.github.io/rsite2/stat451.html",
+          "https://rbolt13.github.io/rsite2/contact.html")
+x <- data.frame("Page" = c("Website Tutorial",
                            "STAT-451",
-                           "Suns Basketball",
                            "Contact"),
-                "Description" = c("Here I describe the processes that went into making this site using rstudio and github.",
-                                  "Stat-451 description.",
-                                  "Sun's Basketball description",
-                                  "contact information"))
+                "Description" = c("Here I describe the processes that go into making a  website (like this one) using rstudio and github.",
+                                  "Stat-451 projects, coming soon.",
+                                  "Here you can find my eamil address and links to other projects I've worked on during my undergrad."))
 x$Page <- paste0("[", x$Page, "](", urls, ")")
 kable(x) %>%
   kable_paper("hover", full_width = F)
 ```
 
 
-```{r load_data, echo=FALSE}
-da.playoffs <- read.csv('da/da.playoffs.csv',
-                  na.strings = c(NA,"","NA"),
-                  header=T)
-da.regular <- read.csv('da/da.regular.csv',
-                  na.strings = c(NA,"","NA"),
-                  header=T)
-```
+
 
 

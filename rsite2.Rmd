@@ -1,5 +1,5 @@
 ---
-title: "rsite2"
+title: "Website Tutorial"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -12,12 +12,12 @@ output:
 ---
 Here are my step by step instructions with pictures on how to create a website using the information provided in the links at the bottom of this page. 
 
-# Materials Needed 
+##### Materials Needed 
 
 * rStudio
 * GitHub Account 
 
-1. From github create a new repository by selecting repositories, and then selecting *New*. 
+### 1. From github create a new repository by selecting repositories, and then selecting *New*. 
 
 ![](images/new.repository.png)
 On the *Create a new repository* page: 
@@ -37,7 +37,7 @@ On the *Create a new repository* page:
 Once the repository has been created, click on the green button that says **Code**, and copy the https link. 
 ![](images/copy.project.png)
 
-2. Create a new Rstudio project by opening RStudio >> file >> New Project 
+### 2. Create a new Rstudio project by opening RStudio >> file >> New Project 
 
 ![](images/file.newproject.png)
 * Choose Version Control 
@@ -51,12 +51,49 @@ Once the repository has been created, click on the green button that says **Code
 * Then copy the link from github into the Reposityory URL, select where you'd like your project to be saved on your home computer, and then *Create Project*. 
 
 ![](images/clone.GIT.repository.png)
-Now 
+Now your studio should show your repositories name - main - RStudio at the top of you browser. 
+
+![](images/rheader.png)
+
+### 3. Next create the sites yml by first creating a txt file with the following information:
+
+![](images/yaml.png)
+
+2 | name : "Name of the website" , self explanatory 
+
+3 | output_dir: "docs" , will be discussed later, but is the name of the folder where the html files will live. 
+
+4 | output : html_document , this is the default and standard used. Above you will see I have a CSS code and background images to display my document over. You can use other YAML here but be careful that the index page has the same YAML, and that the YAML allows for a navbar (Pretty Docs don't seem to allow for a nav bar). 
+
+8 | navbar: , this is the bar that goes across the top of the webpage. 
+
+9 | title : "Summer 2021" , is the name that you want shown in the upper left corner. On this site I chose "Summer 2021" on my last site I chose my name "Randi Bolt". 
+
+10 | left , this can be either left or right and is the side nav bar will output to (i.e. right to left or left to right).
+
+11 | - text: "Home" , this is what is displayed in the nav bar
+
+12 | href : index.html , this is the html file that will match the rmd file. 
+
+To add more pages simply repeat lines 11 and 12 with the corresponding text and html you want the project to call. For example 
+
+### 4. Create a docs folder 
+
+
+### 5. Create home page, by creating a new rmarkdown and saving it to index.rmd. 
+
+### 6. Git push commit to main branch 
+
+### 7. GitHub Pages
+
+### 8. Clean up README
+
+# Tah Dah!!
 
 Sources: 
 
 [GitHub and RStudio](https://resources.github.com/whitepapers/github-and-rstudio/)
-[Link2]()
-[Link3]()
+[Create a Website Using R](https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html)
+[Using Image in Rmarkdown](https://rpubs.com/thaufas/555157)
 
 
