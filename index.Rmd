@@ -1,5 +1,5 @@
 ---
-title: "Summer 2021"
+title: "Welcome to rsite 2"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -11,7 +11,10 @@ output:
     theme: readable
 ---
 
-# Welcome to the site. 
+### Electric Boogaloo 
+
+As I continue my journey in R, this site will display projects and personal explorations during the Summer of 2021. 
+
 
 ```{r, echo=F}
 x <- data.frame("Page" = c("[STAT-451]()", "[Contact]()"))
