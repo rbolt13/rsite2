@@ -79,6 +79,11 @@ To add more pages simply repeat lines 11 and 12 with the corresponding text and 
 
 ### 4. Create a docs folder 
 
+In the file browsing window in R studio (bottom right) make sure your project is open, select the New Folder button, name it docs, and press okay. 
+
+![](images/newfolder.png)
+![](images/docs.png)
+
 ### 5. Create home page, by creating a new rmarkdown and saving it to index.rmd. 
 
 ### 6. Git push commit to main branch 
