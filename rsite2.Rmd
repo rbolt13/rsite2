@@ -100,12 +100,31 @@ From here select all the file you wish to push, add a small comment on what you 
 
 Then in the upper right corner press the Pull arrow and then close, and then the Push arrow
 ![](images/gitcommit.png)
+Remember with git hub you will always commit, pull and then push. 
 
 ### 7. GitHub Pages
 
+Now that your _ site.yml, index.Rmd, and docs folder all visable in Github it is time to activate the page it is posted on. To do so go to your codes repository, and select Settings. Scroll all the way down to the bottom of the setting page where it says *GitHub Pages* and select _Check it out here!_. 
+
+![](images/settingsgitpages.png)
+
+Under Sourcw select main, and docs, and save. After you save the page will look like this below with the weblink shown in blue in the green box. 
+
+![](images/gitpages.png)
+
 ### 8. Clean up README
 
+With the url given in the following step, I like to then update my README page with the link to my newly created webpage, and that's it. 
+
 # Tah Dah!!
+
+This was the fast and dirty way to create a webpage using rstuido and github. I may update and clean this page as I create more web pages in the future, but note that this webpage is more for my notes and processes. Check the links below if you are interested in learning more.
+
+### Adding pages
+
+... coming soon will be a short note on adding multiple pages. 
+
+**When first adding new pages remember to knit all pages before committing them**
 
 Sources: 
 
