@@ -84,9 +84,22 @@ In the file browsing window in R studio (bottom right) make sure your project is
 ![](images/newfolder.png)
 ![](images/docs.png)
 
-### 5. Create home page, by creating a new rmarkdown and saving it to index.rmd. 
+### 5. Create home page, by creating a new rmarkdown with the following header, and saving it to index.rmd. 
+
+Now to create the first page, the home page. Below is an example of how the head of the rmarkdown file should look. Note the output is to the CSSBackground, that I do not show in this tutorial. If you use a CSS background make sure the file is saved within the project, and the file name matches what you have in your rmarkdown. 
+
+![](images/header.png)
 
 ### 6. Git push commit to main branch 
+
+Now that the home page is created, on the top bar select the GIT button, and then commit. 
+
+![](images/GIT.png)
+
+From here select all the file you wish to push, add a small comment on what you did, and then commit. After that make sure to press the Pull arrow and close the pop up when its done loading, and then Push your changes by hitting the Push button, and closing with that is done loading as well. 
+
+Then in the upper right corner press the Pull arrow and then close, and then the Push arrow
+![](images/gitcommit.png)
 
 ### 7. GitHub Pages
 
