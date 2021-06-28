@@ -7,7 +7,7 @@ knit: (function(input_file, encoding) {
  output_file=file.path(dirname(input_file), out_dir, 'ballet.html'))})
 output: 
   html_document:
-    css: CSSBackground.css
+    css: balletCSSBackground.css
     theme: readable
 ---
 

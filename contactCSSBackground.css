@@ -1,0 +1,10 @@
+body {
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190909/pngtree-cute-panda-cartoon-illustration-seamless-pattern-background-vector-image_314366.jpg');
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+div {
+  background-color: rgba(255, 255, 255, 0.45)   /* 35% opaque white */;
+  padding: 0.25em;
+}
