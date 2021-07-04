@@ -1,0 +1,18 @@
+---
+title: "STAT-451"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'stat451.html'))})
+output: 
+  html_document:
+    css: statCSSBackground.css
+    theme: readable
+---
+
+# Introducton 
+
+Statistics-4541 : Applied Statistics for Engineers and Scientist was taught Summer term 2021 at PSU by Subhash Kochar. The problems on this page are from Probability & Statistics for Engineering & Sciences 9th Edition by Jay L. Devore - Duxbury Publisher, and the work mine. 
+
+--> content will be made available July 6th. 

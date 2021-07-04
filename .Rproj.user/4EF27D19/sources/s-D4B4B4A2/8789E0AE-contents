@@ -1,0 +1,21 @@
+---
+name: "my-website2"
+output_dir: "docs"
+output: 
+  html_document:
+    css: CSSBackground.css
+    theme: readable
+navbar:
+  title: "Summer 2021"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Website Tutorial"
+      href: rsite2.html
+    - text: "Music and Ballet"
+      href: ballet.html
+    - text: "Stat-451"
+      href: stat451.html
+    - text: "Contact"
+      href: contact.html
+---

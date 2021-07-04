@@ -1,0 +1,45 @@
+---
+title: "Welcome"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+output: 
+  html_document:
+    css: CSSBackground.css
+    theme: readable
+---
+
+### This is the second website created by Randi Bolt using R Studio and GitHub. 
+
+As I continue my journey in R, this site will display projects and personal explorations during the Summer of 2021. 
+
+```{r, echo=F, message=F}
+library(dplyr)
+library(kableExtra) # highlights table when hover over a line
+```
+
+
+```{r, echo=F}
+urls <- c("https://rbolt13.github.io/rsite2/rsite2.html",
+          "https://rbolt13.github.io/rsite2/ballet.html",
+          "https://rbolt13.github.io/rsite2/stat451.html",
+          "https://rbolt13.github.io/rsite2/contact.html")
+x <- data.frame("Page" = c("Website Tutorial",
+                           "Music and Ballet",
+                           "STAT-451",
+                           "Contact"),
+                "Description" = c("Here I describe the processes that go into making a  website (like this one) using rstudio and github.",
+                                  "This is a case study on ballet music, using the spotifyr package.",
+                                  "Stat-451 bookwork done using R studio, coming soon.",
+                                  "Here you can find a short about me, my eamil address, and links to other projects I've worked on during my undergrad."))
+x$Page <- paste0("[", x$Page, "](", urls, ")")
+kable(x) %>%
+  kable_paper("hover", full_width = F)
+```
+
+
+
+
+

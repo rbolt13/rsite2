@@ -1,0 +1,49 @@
+"0","knitr::opts_chunk$set(echo = TRUE, message = FALSE)"
+"0","library(magrittr)"
+"0","library(dplyr)"
+"0","library(readr)"
+"0","library(tidyr)"
+"2","
+Attaching package: ‘tidyr’
+
+"
+"2","The following object is masked from ‘package:magrittr’:
+
+    extract
+
+"
+"0","library(lubridate)"
+"2","
+Attaching package: ‘lubridate’
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+"
+"0","library(pander)"
+"0","library(ggplot2)"
+"2","Use suppressPackageStartupMessages() to eliminate package startup messages
+"
+"0","library(scales) #commas "
+"2","
+Attaching package: ‘scales’
+
+"
+"2","The following object is masked from ‘package:readr’:
+
+    col_factor
+
+"
+"0","library(gt) #format tables"
+"0","library(gridExtra) # grid.arrange"
+"2","
+Attaching package: ‘gridExtra’
+
+"
+"2","The following object is masked from ‘package:dplyr’:
+
+    combine
+
+"
