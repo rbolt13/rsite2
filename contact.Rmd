@@ -12,3 +12,32 @@ output:
 ---
 
 Content coming soon. 
+
+```{r, echo = F, message=F}
+library(dplyr)
+library(kableExtra)
+```
+
+
+```{r, echo=F}
+contact.urls <- c("https://github.com/rbolt13",
+                  "https://rbolt13.github.io/rsite/index.html",
+                  "https://rbolt13.github.io/Oregon-Grown/",
+                  "https://rbolt13.github.io/sunsbasketball2021/")
+Links <- c("Github",
+          "rsite",
+          "Oregon Grown",
+          "Sun's Basketball")
+Description <- c("The code for this and all other projects I've made are on Github. It's the best way to see what projects I am working on currently.",
+                 "This is the first website I made using R-Studio and Github. Here I posted projects from Statistics- 341 : Introduction to R, such as : Kobe Hot Hands, Gloabal Fuel Data, and COVID-19.",
+                 "Completed fall term 2020 at Portland Community College, this project uses GIS and Arc Pro to investigate dispensary diversity in Oregon.",
+                 "The last time the Suns were in the NBA finals was 1993. This project pulls data from Basket-Reference.com to explore how different players on the Suns preformed during their 2020-2021 leauge. Be warned this site is currently under construciton as I complete summer classes, and thus the only content available is the suns roaster.")
+
+# Data Frame
+y <- data.frame(Links, Description)
+y$Links <- paste0("[", y$Links, "](", contact.urls, ")")
+kable(y) %>%
+  kable_paper("hover", full_width = F) %>%
+  row_spec(0, background = "pink")
+```
+
