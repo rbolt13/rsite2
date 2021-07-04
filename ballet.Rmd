@@ -11,7 +11,7 @@ output:
     theme: readable
 ---
 
-Content coming soon while I create a ballet data 
+Content coming soon while I create a ballet data set. 
 
 ```{r, echo=F, message=F}
 # PACKAGES
@@ -19,13 +19,14 @@ library(dplyr)
 library(lubridate)
 library(kableExtra) 
 library(ggplot2)
+library(RColorBrewer)
 ```
 
 ```{r, echo = F}
 # DATA 
 # 13 Popular ballets (in counting)
 # data from wiki searches 
-ballet <- c("Swan Lake", 
+Ballet <- c("Swan Lake", 
             "The Nutcracker", 
             "Giselle", 
             "Romeo and Juliet",  
@@ -38,7 +39,7 @@ ballet <- c("Swan Lake",
             "Spatacus", 
             "Alice's Adventures in Wonder Land",
             "Firebird")
-composer <- c("Pyotr Ilyich Tchaikovsky", 
+Composer <- c("Pyotr Ilyich Tchaikovsky", 
               "Pyotr Ilyich Tchaikovsky",
               "Adolph Adam", 
               "Sergei Prokofiev",
@@ -77,7 +78,7 @@ choreographer_2 <- c("",
                      "",
                      "",
                      "")
-acts <- c(4, 2, 2, 4, 3, 3, 4, 2, 3, 2, 3, 3, 1)
+Acts <- c(4, 2, 2, 4, 3, 3, 4, 2, 3, 2, 3, 3, 1)
 month_premiered <- c( 3, 12, 6, 12, 12, 11, 2, 5, 1, 3, 12, 2, 6)
 day_premiered <- c( 4, 18, 28, 30, 26, 21, 11, 25, 5, 12, 27, 28, 9)
 year_premiered <- c(1877, 1892, 1841, 1938, 1869, 1945, 1877, 1870, 1890, 1832, 1956, 2011, 1910)
@@ -85,15 +86,39 @@ year_premiered <- c(1877, 1892, 1841, 1938, 1869, 1945, 1877, 1870, 1890, 1832, 
 
 ```{r, echo=F}
 # CREATE DATAFRAME AND WRANGLE DATA 
-ballet.df <- data.frame(ballet, composer, choreographer_1, choreographer_2, acts, month_premiered, day_premiered, year_premiered)
+ballet.df <- data.frame(Ballet, 
+                        Composer, 
+                        "First Choreographer" = choreographer_1, 
+                        "Second Choreographer" = choreographer_2, 
+                        Acts, 
+                        month_premiered, 
+                        day_premiered, 
+                        year_premiered)
 ballet.df <- ballet.df %>% 
-  select(ballet, composer, choreographer_1, choreographer_2, acts) %>%
-  mutate(date_premiered = make_date(year_premiered, month_premiered, day_premiered))
+  select(Ballet, Acts, Composer, First.Choreographer) %>%
+  mutate(Date.Premiered = make_date(year_premiered, month_premiered, day_premiered)) %>%
+  arrange(Ballet) 
 ```
 
-```{r}
+```{r, echo=F}
+# Create Color Pallete 
+nb.cols <- 13
+mycolors <- colorRampPalette(brewer.pal(7, "Pastel2"))(nb.cols)
+# TABLE 
+kable(ballet.df) %>%
+  column_spec(1:5, background = mycolors) %>%
+  row_spec(0:13, align = "c")
+```
+
+
+```{r, echo = F}
+# date premiered 
 ballet.df %>% 
-  ggplot(aes(x= date_premiered, y = ballet)) +
+  ggplot(aes(x= Date.Premiered, y = Ballet)) +
   geom_point()
+# # of acts
+ballet.df %>% 
+  ggplot(aes(x= Acts)) +
+  geom_bar()
 ```
 
