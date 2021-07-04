@@ -1,8 +1,0 @@
-"0","# state vectors"
-"0","highly.impacted <- c(""California"", ""Texas"", ""Florida"")"
-"0","mildly.impacted <- c(""Hawaii"", ""Maine"", ""Montana"")"
-"0","# column title vector"
-"0","col.titles <- c(""Dates"", ""Province_State"", ""People"",""title"", ""id"")"
-"0","# color palettes "
-"0","highly.impacted.colors <- c(""royalblue1"", ""steelblue1"",""turquoise4"")"
-"0","mildly.impacted.colors <- c(""coral"", ""orangered2"",""darkred"")"
