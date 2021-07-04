@@ -29,6 +29,7 @@ On the *Create a new repository* page:
 * Select README file and gitIgnore (make sure to select R)
 
 ![](images/ignore.png)
+When I redo this page, I will discuss .gitignore more, however for now just add it because the defualt settings are nice, and will make it easier to add onto later. 
 
 * Create Repository 
 

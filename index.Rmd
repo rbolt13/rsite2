@@ -36,7 +36,7 @@ x <- data.frame("Page" = c("Website Tutorial",
                                   "Here you can find a short about me, my eamil address, and links to other projects I've worked on during my undergrad."))
 x$Page <- paste0("[", x$Page, "](", urls, ")")
 kable(x) %>%
-  kable_paper("hover", full_width = F)
+  kable_paper("hover", full_width = F) 
 ```
 
 
