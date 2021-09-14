@@ -1,5 +1,5 @@
 # About
-My second website attempt using github and rstudio which includes a tutorial on how riste2 was made, ballet data I created, and the fisrt homework solutions to Statistics 451. 
+This is my second website attempt using github and rstudio which includes a tutorial on how riste2 was made, ballet data I created, and the fisrt homework solutions to Statistics 451. 
 
 View [here](https://rbolt13.github.io/rsite2/index.html)
 
