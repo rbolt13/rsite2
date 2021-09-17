@@ -5,6 +5,7 @@ View [here](https://rbolt13.github.io/rsite2/index.html)
 
 # To do 
 * explore ballet data with Spotifyr 
+* clean up rsite2 tutorial 
 
 # Done 
 ☑️ Upload STAT-451 homework 1
