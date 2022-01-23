@@ -11,7 +11,7 @@ output:
     theme: readable
 ---
 
-Content coming soon while I create a ballet data set. 
+Below is a dataset of 13 popular ballets. 
 
 ```{r, echo=F, message=F}
 # PACKAGES
