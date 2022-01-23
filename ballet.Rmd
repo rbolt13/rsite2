@@ -20,6 +20,7 @@ library(lubridate)
 library(kableExtra) 
 library(ggplot2)
 library(RColorBrewer)
+library(plotly)
 ```
 
 ```{r, echo = F}
@@ -113,12 +114,12 @@ kable(ballet.df) %>%
 
 ```{r, echo = F}
 # date premiered 
-ballet.df %>% 
-  ggplot(aes(x= Date.Premiered, y = Ballet)) +
-  geom_point()
-# # of acts
-ballet.df %>% 
-  ggplot(aes(x= Acts)) +
-  geom_bar()
+plot <- ballet.df %>% 
+  ggplot(aes(x= Date.Premiered, y = Ballet, color = factor(Acts))) +
+  geom_point() +
+  labs(x = "Date Premiered", y = "Ballet", color = "Number of Acts") +
+  ggtitle("Ballets by Date Premiered")
+ggplotly(plot)
+
 ```
 
