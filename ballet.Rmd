@@ -37,7 +37,7 @@ Ballet <- c("Swan Lake",
             "Coppelia", 
             "The Sleeping Beauty ", 
             "La Sylphide ", 
-            "Spatacus", 
+            "Spartacus", 
             "Alice's Adventures in Wonder Land",
             "Firebird")
 Composer <- c("Pyotr Ilyich Tchaikovsky", 
@@ -83,6 +83,21 @@ Acts <- c(4, 2, 2, 4, 3, 3, 4, 2, 3, 2, 3, 3, 1)
 month_premiered <- c( 3, 12, 6, 12, 12, 11, 2, 5, 1, 3, 12, 2, 6)
 day_premiered <- c( 4, 18, 28, 30, 26, 21, 11, 25, 5, 12, 27, 28, 9)
 year_premiered <- c(1877, 1892, 1841, 1938, 1869, 1945, 1877, 1870, 1890, 1832, 1956, 2011, 1910)
+### Coming Soon
+Links <- c("https://www.youtube.com/watch?v=LbUatYSm8ME", 
+            "The Nutcracker", 
+            "Giselle", 
+            "Romeo and Juliet",  
+            "Don Quixote", 
+            "Cinderella ", 
+            "https://www.youtube.com/watch?v=zTR4Oco_0Bc", 
+            "Coppelia", 
+            "The Sleeping Beauty ", 
+            "https://www.youtube.com/watch?v=R_RFxSLar2A", 
+            "https://www.youtube.com/watch?v=Fha6rYtaLMk", 
+            "https://www.youtube.com/watch?v=c2wWq25p5Sk",
+            "https://www.youtube.com/watch?v=Yo9L9H--t3k")
+
 ```
 
 ```{r, echo=F}

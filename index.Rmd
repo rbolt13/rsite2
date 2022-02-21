@@ -32,8 +32,8 @@ x <- data.frame("Page" = c("Website Tutorial",
                            "Contact"),
                 "Description" = c("Here I describe the processes that go into making a  website (like this one) using rstudio and github.",
                                   "This is a case study on ballet music, using a data set I created.",
-                                  "Stat-451 bookwork done using R studio, coming soon.",
-                                  "Here you can find a short about me, my eamil address, and links to other projects I've worked on during my undergrad."))
+                                  "Stat-451 bookwork done using R studio (Homework 1).",
+                                  "Here you can find a short about me, my email address, and links to other projects I've worked on during my undergrad."))
 x$Page <- paste0("[", x$Page, "](", urls, ")")
 kable(x) %>%
   kable_paper("hover", full_width = F) 
